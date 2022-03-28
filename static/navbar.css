@@ -1,0 +1,182 @@
+.smallSidebarContainer {
+   position: fixed !important;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 70px;
+   left: 20px;
+   border-radius: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 102;
+   padding-bottom: 20px;
+}
+
+.smallSidebarInnerContainer {
+   color: rgb(98, 95, 95);
+   display: flex;
+   flex-direction: column;
+   background-color: #100f16;
+   justify-content: space-between;
+   width: 100%;
+   margin-top: 5%;
+}
+
+.navColors {
+   display: flex;
+   align-items: center;
+
+   height: 45px;
+   padding-left: 10px;
+}
+
+.navColors div {
+   margin: 0 3px;
+   width: 8px;
+   height: 8px;
+   border-radius: 100px;
+}
+
+.navbarProfile {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   padding: 15px 0;
+   padding-bottom: 30px;
+}
+
+.navbarProfileIcon {
+   max-width: 40px;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: 0.25s ease;
+}
+.navbarProfileIcon:hover:not(.active) {
+   box-shadow: 0 0 0 4px #100f16, 0 0 0 4px #ffffff;
+}
+
+.smallSidebarLink {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   padding: 25px 0;
+   position: relative;
+   transition: 0.25s ease;
+}
+.smallSidebarLink:hover {
+   transform: translateX(10%);
+}
+.smallSidebarIcon {
+   height: 30px;
+   width: 30px;
+   cursor: pointer;
+   filter: saturate(1);
+   /* padding-bottom: 13px; */
+}
+.smallSidebarActive {
+   height: 100%;
+   width: 100%;
+   border: 1px solid #000;
+   border-radius: 13px;
+   border: double 1px transparent;
+   background-image: linear-gradient(rgb(15 15 16), rgb(15 15 16)), linear-gradient(90deg, #7819bb, #4b44ad);
+   background-origin: border-box;
+   background-clip: content-box, border-box;
+   border-image-slice: 20;
+   -webkit-filter: saturate(4);
+   filter: saturate(4);
+}
+
+.smallSidebarLink .toolTip {
+   opacity: 0;
+   visibility: hidden;
+   width: 9rem;
+   height: 80%;
+   color: #fff;
+   margin-left: 4.5vw;
+   border-radius: 0 5px 5px 0;
+
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+   top: 50%;
+   transform: translate(-45%, -50%);
+   left: 100%;
+   transition: all 0.2s ease;
+   z-index: 100;
+   /* box-shadow: 4px 8px 32px rgba(31, 38, 135, 0.37); */
+}
+.toolTipText {
+   margin-top: 15%;
+   font-size: 14px;
+   font-weight: normal;
+}
+.smallSidebarLink:hover .toolTip {
+   opacity: 1;
+   visibility: visible;
+}
+.smallSidebarLink:hover .toolTip::before {
+   opacity: 1;
+}
+.toolTip::before {
+   left: 0;
+   opacity: 0;
+   border-radius: 0 5px 5px 0 !important;
+   /* transition: opacity 0.2s ease; */
+}
+.logout {
+   position: absolute;
+   bottom: 40px;
+
+   display: flex;
+   cursor: pointer;
+}
+
+.logoutIcon {
+   height: 25px;
+   width: 25px;
+}
+.linkText {
+   font-size: 13.5px;
+   color: black;
+}
+
+@media screen and (max-width: 1700px) {
+   .smallSidebarContainer {
+      width: 70px;
+   }
+   .linkText {
+      font-size: 12.5px;
+   }
+}
+
+@media screen and (max-width: 1400px) {
+   .smallSidebarContainer {
+      width: 70px;
+   }
+   .linkText {
+      font-size: 12px;
+   }
+}
+
+@media screen and (max-width: 1200px) {
+   .smallSidebarContainer {
+      width: 70px;
+   }
+   .linkText {
+      font-size: 11.5px;
+   }
+}
+
+@media screen and (max-width: 1048px) {
+   .smallSidebarContainer {
+      width: 70px;
+   }
+   .linkText {
+      font-size: 11px;
+   }
+}
