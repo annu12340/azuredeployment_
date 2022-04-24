@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\admin\Desktop\azuredeployment_hackathonproject\venv
+set VIRTUAL_ENV=C:\Users\admin\Desktop\django-ecommerce\DevTools\gitauto\azuredeployment_\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
